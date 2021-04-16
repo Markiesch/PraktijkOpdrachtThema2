@@ -15,11 +15,6 @@
     --primiry-color: #100a77;
 }
 
-/* Verwijderd scrollbar op X axis */
-body {
-    margin-bottom: 100px;
-}
-
 /* Veranderd de tekst en achtergrondkleur wanneer de gebruiker deze selecteerd */
 *::selection {
     color: white;
@@ -53,10 +48,11 @@ button:hover {
 header {
     background-color: white;
     position: sticky;
-    top: 0px;
+    top: 0;
+    left: 0;
     /* Zet de header op de voorgrond */
     z-index: 10;
-    box-shadow: 0px 5px 30px grey;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
 }
 
 nav {
@@ -150,22 +146,17 @@ section {
 
 /* Domein sectie */
 .cards {
-    display: grid;
-    /*
-    repeat(auto-fit, minmax(300px, 1fr)) dit betekend dat de browser automatisch de grootte van de div aanpast van een minimale grootte 
-    van 400px en een maximale grootte van 1fr (1 friction, de hele grootte van het parent element)
-
-    Auto-fit werkt hetzelfde als auto-fill alleen generate Auto-fit geen grid columons of rows als er geen content over is (dit is makkelijk te zien met een fueture in mozilla firefox browser)
-    */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /* Ruimte tussen de child elements van .cards container */
-    grid-gap: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
     /* totale breedte van .cards container zodat die niet tegen de kant aan staat */
     width: 80%;
-    margin: 20vh;
+    margin: 20vh auto;
 }
 
 .domein {
+    flex: 0 1 400px;
     background-color: white;
     box-shadow: 0px 5px 20px grey;
     overflow: hidden;
@@ -199,7 +190,7 @@ section {
 
 .domein img:hover {
     /* Maakt de afbeelding groter als je eroverheen hovered */
-    transform: scale(1.2);
+    transform: scale(1.1) rotate(3deg);
 }
 
 /* Locatie sectie */
