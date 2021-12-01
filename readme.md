@@ -2,7 +2,7 @@
     <a>
         <img src="images/logo.png" alt="Logo" width="80" />
     </a>
-    <h1>Foodz - Project Thema 4</h1>
+    <h1>KW1C landing page - Project Thema 4</h1>
     <p>The most ugliest landing page you have ever seen</p>
     <a href="https://markiesch.github.io/PraktijkOpdrachtThema2/">View Demo</a>
     ·
